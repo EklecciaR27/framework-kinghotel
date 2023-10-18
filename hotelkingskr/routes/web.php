@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Reservasi;
+use App\Models\Guest;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+Route::get('/data/reservasi', function () {
+    return view('datahotel.reservasi', [
+    "reservasi" => Reservasi::all()
+    ]);
+})->name('datahotel.reservasi');
+
+Route::get('/data/guest', function () {
+    return view('datahotel.guest', [
+    "guest" => Guest::all()
+    ]);
+})->name('datahotel.guest');
+
+
