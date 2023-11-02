@@ -1,5 +1,5 @@
 # framework-kinghotel
-Post Test Framework - King Hotel 
+Post Test Framework - King Hotel - 21091006036 - Ekleccia Reydianto
 
 ## Landing Page - King Hotel Nusa Dua
 ## Section 1
@@ -12,7 +12,9 @@ Post Test Framework - King Hotel
 ![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/ss3.png?raw=true)
 
 ## Database Reservasi (Dummy Reservasi)
+### 5 Variable ID, Nama, No Telp, Email, Jumlah Kamar 
 ![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/ss4.png?raw=true)
 
-## Database Guest (Dummy Guest)
+## Database Guest (Dummy Guest) 
+### 3 Variable ID, NIK dan Nama
 ![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/ss5.png?raw=true)
