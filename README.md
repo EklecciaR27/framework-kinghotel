@@ -39,3 +39,17 @@ Jika berhasil di CREATE maka akan ada alert
 Tampilan di DATABASE LOCAL
 ![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/11.png?raw=true)
 
+### UPDATE DATA RESERVASI
+Klik icon edit pada data reservasi yang ingin di ubah
+![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/12.png?raw=true)
+
+Maka akan dialihkan ke halaman edit, edit data yang ingin diubah
+![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/13.png?raw=true)
+
+Setelah data berhasil diubah
+![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/14.png?raw=true)
+
+### DELETE DATA RESERVASI
+Klik icon delete pada data yang ingin dihapus, maka data akan dihapus. Jika data berhasil dihapus maka akan dialihkan ke view data. Dan ada alert DATA DENGAN ID... Berhasil di HAPUS
+![alt text](https://github.com/EklecciaR27/framework-kinghotel/blob/main/screenshot/16.png?raw=true)
+
