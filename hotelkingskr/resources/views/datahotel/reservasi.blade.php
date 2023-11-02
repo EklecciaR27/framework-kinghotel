@@ -17,9 +17,34 @@
 
         @include('components.navbardashboard')
 
-            <div class="text-center">
-                <h1 class="text-3xl font-bold mt-12">DATA RESERVASI</h1>
+            <div class="text-center flex flex-col items-center">
+                <h1 class="text-3xl font-bold mt-8">DATA RESERVASI</h1>
+                <a href="{{ route('datahotel.crud.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+                    <i class="fas fa-plus"></i> Create
+                </a>
             </div>
+
+            @if (session('success'))
+                    <div class="mb-6">
+                        <div class="p-2 rounded-sm bg-green-100 ring-1 text-center ring-green-500">
+                            <p class="text-green-500">
+                                Reservasi dengan ID {{ session('edited_id') }} berhasil diubah.
+                            </p>
+                        </div>
+                    </div>
+             @endif
+
+             @if (session('success1'))
+             <div class="mb-6">
+                 <div class="p-2 rounded-sm bg-green-100 ring-1 text-center ring-green-500">
+                     <p class="text-green-500">
+                         Reservasi dengan ID {{ session('deleted_id') }} berhasil dihapus.
+                     </p>
+                 </div>
+             </div>
+             @endif
+
+
 
             <div class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -38,6 +63,9 @@
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Nomor Telepon
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        ID-Guest
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Aksi
@@ -60,13 +88,19 @@
                                             {{ $res->notelp }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            <a  class="text-indigo-600 hover:text-indigo-900">
+                                            {{ $res->guest_id }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <a href="{{ route('datahotel.crud.edit', $res->id) }}"class="text-indigo-600 hover:text-indigo-900">
                                                 <i class="fas fa-edit text-blue-500"></i>
                                             </a>
-
-                                            <a class="text-red-600 hover:text-red-900">
-                                                <i class="fas fa-trash text-red-500"></i>
-                                            </a>
+                                            <form action="{{route('datahotel.delete', $res->id)}}" method="post">
+                                            @csrf
+                                            <button>
+                                                <a class="text-red-600 hover:text-red-900">
+                                                    <i class="fas fa-trash text-red-500"></i>
+                                                </a>
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach

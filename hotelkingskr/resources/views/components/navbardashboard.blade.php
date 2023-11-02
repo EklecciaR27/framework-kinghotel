@@ -19,6 +19,12 @@
           <li class="hover-bg-slate-800"><a href="{{ url('data/guest') }}">GUEST</a></li>
           <li class="hover-bg-slate-800"><a href="#">ROOM</a></li>
         </ul>
+        {{-- <div class="flex items-center ml-4">
+            <span class="text-white mr-4">Welcome, {{ auth()->user()->name }}</span>
+            <a href="{{ route('logout') }}" class="text-white hover:text-red-500">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div> --}}
       </nav>
 </div>
 

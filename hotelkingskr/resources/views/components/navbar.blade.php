@@ -11,11 +11,11 @@
         <li><a href="#">The Resort</a></li>
         <li><a href="#">The Room & Suites</a></li>
         <li><a href="#">Dining</a></li>
-        {{-- <li><a href="#">Our Hotel</a></li> --}}
-        <li><a href="{{ url('data/reservasi') }}">Database</a></li>
+        <li><a href="#">Our Hotel</a></li>
+        {{-- <li><a href="{{ url('data/reservasi') }}">Database</a></li> --}}
     </ul>
     <div class="hidden lg:flex justify-end mr-52">
-        @include('components.button',['nama' => 'BOOK'])
+             @include('components.button',['nama' => 'LOGIN'])
     </div>
 
     <div id="hamburger" class="lg:hidden cursor-pointer">
