@@ -1,0 +1,9 @@
+{
+    "name": "asus/framework-kinghotel",
+    "autoload": {
+        "psr-4": {
+            "Asus\\FrameworkKinghotel\\": "src/"
+        }
+    },
+    "require": {}
+}
